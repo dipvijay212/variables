@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+
+<h1>Temperature Converter Results</h1>
+<div id="results"></div>
+
+<script>
+    // Function to convert Celsius to Fahrenheit
+    function celsiusToFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+    }
+
+    // Function to convert Fahrenheit to Celsius
+    function fahrenheitToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+    }
+
+    // Declaring variables to store temperature in Celsius and Fahrenheit
+    let celsius = 25;
+    let fahrenheit = 77;
+    
+    // Converting temperatures
+    let convertedToFahrenheit = celsiusToFahrenheit(celsius);
+    let convertedToCelsius = fahrenheitToCelsius(fahrenheit);
+
+    // Creating a string to store the results
+    let resultsMessage = "";
+
+    // Displaying the results
+    console.log(celsius + "°C is " + convertedToFahrenheit + "°F");
+    resultsMessage += celsius + "°C is " + convertedToFahrenheit + "°F<br>";
+
+    console.log(fahrenheit + "°F is " + convertedToCelsius + "°C");
+    resultsMessage += fahrenheit + "°F is " + convertedToCelsius + "°C<br>";
+
+    // Displaying the results using innerHTML
+    document.getElementById("results").innerHTML = resultsMessage;
+</script>
+
+</body>
+</html>
